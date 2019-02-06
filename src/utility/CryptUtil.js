@@ -1,9 +1,9 @@
-const bcrypt = require('bcrypt');
-const salt = bcrypt.genSaltSync(10);
+const Cryptr = require('cryptr');
+const cryptr = new Cryptr('myTotalySecretKey');
 module.exports.getEncryptedString = function(plainText){
-    return bcrypt.hashSync(plainText, salt);
+    return cryptr.encrypt(plainText);
 }
 
 module.exports.validateEncr = function(plainText, encodedText){
-  return bcrypt.compareSync(plainText, encodedText);
+  return cryptr.encrypt(plainText) === encodedText;
 }
