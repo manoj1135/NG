@@ -1,5 +1,4 @@
 console.log("Setting up users..");
-const bcrypt = require('bcrypt');
 module.exports = function(sequelize, DataTypes){
   var Users = sequelize.define('Users', {
       id: {

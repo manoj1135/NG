@@ -19,7 +19,6 @@ var db = {
     Sequelize: Sequelize,
     sequelize: sequelize
 };
-console.log(sequelize);
 sequelize.authenticate().then(() => {
     console.log('Connection has been established successfully. ');
     console.log("Invoking models...");

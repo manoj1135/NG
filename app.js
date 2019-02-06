@@ -28,10 +28,11 @@ app.use('/fontawesome', express.static(nodeDir+'/@fortawesome/fontawesome-free/'
 app.use(cookieParser());
 
 require("./src/routes")(app);
+var serverConfig =boot.SYSCONFIG.path().server;
 
 boot.database.sequelize.sync({force:AppConf.isReloadDB})
-  .then(app.listen(3000, ()=>{
-    console.log("Server is started on port 3000");
+  .then(app.listen(serverConfig.default.port, ()=>{
+    console.log("Server is started on port "+serverConfig.default.port);
   }))
   .catch(function(err) {
     console.log('Server failed to start due to error: %s', err);
