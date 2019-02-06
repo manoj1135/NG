@@ -1,0 +1,33 @@
+{
+  "name": "ng",
+  "version": "1.0.0",
+  "description": "Angular OpsNGN",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manoj",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.3",
+    "angular": "^1.7.5",
+    "angular-route": "^1.7.5",
+    "angular-ui-router": "^1.0.20",
+    "angularjs-datepicker": "^2.1.23",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "jquery": "^3.3.1",
+    "jquery-ui-dist": "^1.12.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "nodemailer": "^4.7.0",
+    "path": "^0.12.7",
+    "sequelize": "^4.41.2",
+    "ui-router": "^1.0.0-alpha.3"
+  }
+}

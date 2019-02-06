@@ -1,0 +1,88 @@
+<div ng-controller="loginController">
+	<div class="container">
+		<div class="login-form">
+			<div class="signup-div">
+    			<div class="panel">
+						<h2>Sign Up</h2>
+						<p>Fileds marked with (<span style="color:red;">*</span>) are mandatory</p>
+					</div>
+				<span class="text-danger"> {{errorMsg}} </span>
+				<form name="userSignUpForm" id="userSignUpForm">
+					<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="email" ng-model="user['email']" class="form-control"
+											 placeholder="Email Address"/>
+									<div class="panel">
+										<p><i>Will be used as user name</i></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="password" ng-model="user['password']" class="form-control"
+											 placeholder="Password"/>
+								</div>
+							</div>
+					</div>
+					<div class="row">
+							<div class="col-md-6">
+									&nbsp;
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="password" ng-model="user['confirmPassword']" class="form-control"
+											 placeholder="Confirm Password"/>
+								</div>
+							</div>
+					</div>
+					<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" ng-model="user['firstName']" class="form-control"
+											 placeholder="First Name"/>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" ng-model="user['lastName']" class="form-control"
+											 placeholder="Last Name"/>
+								</div>
+							</div>
+					</div>
+					<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<datepicker>
+									  <input ng-model="user['dob']" type="text" class="form-control"
+										placeholder="Date of Birth"/>
+									</datepicker>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<select placeholder="User Type" ng-model="user['userType']" ng-options="ut.name for ut in userTypes" class="form-control">
+									</select>
+								</div>
+							</div>
+					</div>
+					<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<select placeholder="User Role" ng-model="user['userRole']" ng-options="ut.name for ut in userTypes" class="form-control">
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									&nbsp;
+								</div>
+							</div>
+					</div>
+					<span class="text-success"> {{successMsg}} </span>
+					<button type="submit" class="btn btn-primary" ng-click="addUser()">Sign Up</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
