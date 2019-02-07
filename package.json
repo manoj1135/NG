@@ -28,7 +28,7 @@
     "nodemailer": "^4.7.0",
     "path": "^0.12.7",
     "properties-reader": "0.0.16",
-    "sequelize": "^4.41.2",
+    "sequelize": "4.41.2",
     "ui-router": "^1.0.0-alpha.3"
   }
 }

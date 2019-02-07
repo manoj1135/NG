@@ -1,3 +1,3 @@
 module.exports = {
-  isReloadDB:true
+  isReloadDB:false
 }
