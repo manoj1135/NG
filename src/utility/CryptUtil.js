@@ -1,9 +1,9 @@
-const Cryptr = require('cryptr');
-const cryptr = new Cryptr('myTotalySecretKey');
+const crypto = require('crypto');
+const hashAlgo = "sha256";
 module.exports.getEncryptedString = function(plainText){
-    return cryptr.encrypt(plainText);
+    return crypto.createHash(hashAlgo).update(plainText).digest('base64');
 }
 
 module.exports.validateEncr = function(plainText, encodedText){
-  return cryptr.encrypt(plainText) === encodedText;
+  return this.getEncryptedString(plainText) === encodedText;
 }

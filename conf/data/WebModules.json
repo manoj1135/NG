@@ -1,0 +1,20 @@
+{
+    "modules":[{
+            "name":"Map",
+            "icon":"fa-map",
+            "url":"/maps"
+        },{
+            "name":"Map",
+            "icon":"fa-map",
+            "url":"/maps"
+        },{
+            "name":"Map",
+            "icon":"fa-map",
+            "url":"/maps"
+        },{
+            "name":"Map",
+            "icon":"fa-map",
+            "url":"/maps"
+        }
+    ]
+}

@@ -9,5 +9,5 @@ const database = require(path.join(dbDir+"/Database"));
 const SYSCONFIG = ConfigLoader.load("system_config");
 module.exports = {
   database,
-  SYSCONFIG
+  SYSCONFIG,
 }

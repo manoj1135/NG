@@ -28,7 +28,7 @@ module.exports = function(MagicLinks){
     }
 
     var _getEncodedUrl = (req, user) => {
-        let url = req.headers.origin+"/#/resetPassword";
+        let url = req.headers.origin+"/resetPassword";
         url+="?user="+user.userName
         url+="&key="+CryptUtil.getEncryptedString(user.userName)
         return url;

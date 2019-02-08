@@ -5,6 +5,7 @@ mainApp.run(function($rootScope){
 
 mainApp.config(['$routeProvider','$locationProvider','$stateProvider',
     function($routeProvider, $locationProvider, $stateProvider) {
+        console.log("$routeProvider ",$routeProvider);
         $routeProvider.
             when('/', {
                 templateUrl: '../pages/login.html',

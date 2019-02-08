@@ -36,8 +36,12 @@ var loginController = function($scope, $http, $location, $window, $rootScope){
 				});
 	}
 	$scope.resetPassword = function(){
+		console.log("request came here...");
+		
 		let user = $scope.user;
 		let params = $location.search();
+		console.log(user);
+		console.log(params);
 		if(user.password !== user.confirmPassword){
 				$scope.errorMsg = "Passwords do not match."
 				return;

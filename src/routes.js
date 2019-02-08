@@ -3,7 +3,6 @@ var session = require('express-session');
 const express = require('express');
 const router = express.Router();
 module.exports = function(app){
-
     app.use(session({
         key: 'user_sid',
         secret: 'somerandonstuffs',
@@ -16,6 +15,7 @@ module.exports = function(app){
 
     // Route all GET request to index
     app.get('/*', (req, res) => {
+        // console.log("req ",req);
         res.redirect('/');
     });
 
@@ -45,7 +45,9 @@ module.exports = function(app){
 
     app.post("/api/resetPassword",(req, res)=>{
         var user = req.body.user;
+        console.log("user ",user);
         var params = req.body.params;
+        console.log("params ",params);
         database.Users.resetPassword(user, params)
         .done((response)=>{
           res.send(response);
