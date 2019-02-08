@@ -3,29 +3,11 @@
       <div class="item" ng-click="resetToHome()">
           <i class="fas fa-fw fa-home"></i>
       </div>
-      <div class="item active" 
-            ng-click="switchMenu('map')" 
+      <div ng-repeat="module in userModules" class="item active" 
+            ng-click="switchMenu('{{module.name}}')" 
             ng-mouseenter="openThisMenu($event)"
             ng-mouseleave="closeThisMenu($event)">
-          <i class="fas fa-fw fa-map-marked-alt"></i> Map
-      </div>
-      <div class="item" 
-            ng-click="switchMenu('columns')"
-            ng-mouseenter="openThisMenu($event)"
-            ng-mouseleave="closeThisMenu($event)">
-          <i class="fas fa-fw fa-columns"></i> Split
-      </div>
-      <div class="item" 
-            ng-click="switchMenu('grid')"
-            ng-mouseenter="openThisMenu($event)"
-            ng-mouseleave="closeThisMenu($event)">
-          <i class="fas fa-fw fa-th"></i> Grid
-      </div>
-      <div class="item" 
-            ng-click="switchMenu('users')"
-            ng-mouseenter="openThisMenu($event)"
-            ng-mouseleave="closeThisMenu($event)">
-          <i class="fas fa-fw fa-user-circle"></i> Users
+          <i class="{{module.icon}}"></i> {{module.displayText}}
       </div>
       <div class="menuOpener" ng-click="toggleMenu()">
         <i class="fas fa-fw fa-expand"></i>

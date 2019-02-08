@@ -1,6 +1,7 @@
 console.log("Invoking Users db helper...");
 const ErrorCodes = require("../../conf/db/ErrorCodes");
 const CryptUtil = require("../utility/CryptUtil");
+const GenericUtil = require("../utility/GenericUtil");
 
 module.exports = function(Users){
   Users.validateUser = (luser) => {
@@ -17,10 +18,15 @@ module.exports = function(Users){
               message: ErrorCodes["10001"],
             }
           }
+          let user = ruser.toJSON();
+          let userModules = GenericUtil.loadModules(user);
          return {
            errorCode : "00000",
            message: ErrorCodes["00000"],
-           data : ruser.toJSON()
+           data : {
+            user:user,
+            userModules:userModules
+           }
          }
     }).catch(function (err) {
       return {

@@ -1,20 +1,28 @@
 {
     "modules":[{
-            "name":"Map",
-            "icon":"fa-map",
-            "url":"/maps"
+            "name":"map",
+            "displayText":"Map",
+            "icon":"fas fa-fw fa-map-marked-alt",
+            "url":"/maps",
+            "userType":"1,2,3"
         },{
-            "name":"Map",
-            "icon":"fa-map",
-            "url":"/maps"
+            "name":"columns",
+            "displayText":"Split",
+            "icon":"fas fa-fw fa-columns",
+            "url":"/maps",
+            "userType":"1,2,3"
         },{
-            "name":"Map",
-            "icon":"fa-map",
-            "url":"/maps"
+            "name":"grid",
+            "displayText":"Grid",
+            "icon":"fas fa-fw fa-th",
+            "url":"/maps",
+            "userType":"1,2,3"
         },{
-            "name":"Map",
-            "icon":"fa-map",
-            "url":"/maps"
+            "name":"users",
+            "displayText":"Users",
+            "icon":"fas fa-fw fa-user-circle",
+            "url":"/maps",
+            "userType":"1,2,3"
         }
     ]
 }

@@ -13,10 +13,12 @@ var loginController = function($scope, $http, $location, $window, $rootScope){
 				resp = resp.data;
 				$scope.errorMsg = "";
 				if(resp.errorCode == "00000"){
-					$rootScope.loggedInUserInfo = resp;
+					$rootScope.loggedInUserInfo = resp.data.user;
+					$rootScope.userModules = resp.data.userModules;
+					console.log($rootScope);
 					$location.path("/home");
 				}else{
-					$scope.errorMsg = resp.message
+					$scope.errorMsg = resp.message;
 				}
 			}, (err)=>{
 					$scope.errorMsg = "Unable to validate user.";
@@ -36,12 +38,8 @@ var loginController = function($scope, $http, $location, $window, $rootScope){
 				});
 	}
 	$scope.resetPassword = function(){
-		console.log("request came here...");
-		
 		let user = $scope.user;
 		let params = $location.search();
-		console.log(user);
-		console.log(params);
 		if(user.password !== user.confirmPassword){
 				$scope.errorMsg = "Passwords do not match."
 				return;
@@ -84,6 +82,8 @@ var loginController = function($scope, $http, $location, $window, $rootScope){
 }
 
 var homeController = function($scope, $http, $location, $window, $rootScope){
+	
+	
 	$scope.toggleMenu = function() {
 		$(".left").toggleClass("left-state-hover");
 	}
