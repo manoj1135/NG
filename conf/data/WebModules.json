@@ -9,19 +9,19 @@
             "name":"columns",
             "displayText":"Split",
             "icon":"fas fa-fw fa-columns",
-            "url":"/maps",
+            "url":"/columns",
             "userType":"1,2,3"
         },{
             "name":"grid",
             "displayText":"Grid",
             "icon":"fas fa-fw fa-th",
-            "url":"/maps",
+            "url":"/grid",
             "userType":"1,2,3"
         },{
             "name":"users",
             "displayText":"Users",
             "icon":"fas fa-fw fa-user-circle",
-            "url":"/maps",
+            "url":"/users",
             "userType":"1,2,3"
         }
     ]

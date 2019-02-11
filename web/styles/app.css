@@ -128,7 +128,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 .openMenu{
 	border: 1px solid #484848;
     width: 200px;
-    border-collapse: collapse;
+	border-collapse: collapse;
+	cursor: pointer;
 }
 
 .loggedInUserBox:hover{
