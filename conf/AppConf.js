@@ -1,3 +1,4 @@
 module.exports = {
-  isReloadDB:false
+  isReloadDB:false,
+  isSeedUsers:false
 }

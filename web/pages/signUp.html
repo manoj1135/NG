@@ -1,7 +1,7 @@
 <div ng-controller="loginController">
 	<div class="container">
 		<div class="login-form">
-			<div class="signup-div">
+			<div class="main-div" style="max-width: 68%;">
     			<div class="panel">
 						<h2>Sign Up</h2>
 						<p>Fileds marked with (<span style="color:red;">*</span>) are mandatory</p>
@@ -11,16 +11,16 @@
 					<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="email" ng-model="user['email']" class="form-control"
+									<input type="email" ng-model="user['email']" class="m-textbox"
 											 placeholder="Email Address"/>
-									<div class="panel">
+									<div>
 										<p><i>Will be used as user name</i></p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="password" ng-model="user['password']" class="form-control"
+									<input type="password" ng-model="user['password']" class="m-textbox"
 											 placeholder="Password"/>
 								</div>
 							</div>
@@ -31,7 +31,7 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="password" ng-model="user['confirmPassword']" class="form-control"
+									<input type="password" ng-model="user['confirmPassword']" class="m-textbox"
 											 placeholder="Confirm Password"/>
 								</div>
 							</div>
@@ -39,13 +39,13 @@
 					<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" ng-model="user['firstName']" class="form-control"
+									<input type="text" ng-model="user['firstName']" class="m-textbox"
 											 placeholder="First Name"/>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" ng-model="user['lastName']" class="form-control"
+									<input type="text" ng-model="user['lastName']" class="m-textbox"
 											 placeholder="Last Name"/>
 								</div>
 							</div>
@@ -54,14 +54,15 @@
 							<div class="col-md-6">
 								<div class="form-group">
 									<datepicker>
-									  <input ng-model="user['dob']" type="text" class="form-control"
+									  <input ng-model="user['dob']" type="text" class="m-textbox"
 										placeholder="Date of Birth"/>
 									</datepicker>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<select placeholder="User Type" ng-model="user['userType']" ng-options="ut.name for ut in userTypes" class="form-control">
+									<select placeholder="User Type" ng-model="user['userType']" 
+									ng-options="ut.name for ut in userTypes" class="m-selectbox">
 									</select>
 								</div>
 							</div>
@@ -69,7 +70,8 @@
 					<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<select placeholder="User Role" ng-model="user['userRole']" ng-options="ut.name for ut in userTypes" class="form-control">
+									<select placeholder="User Role" ng-model="user['userRole']" 
+									ng-options="rt.name for rt in roleTypes" class="m-selectbox">
 									</select>
 								</div>
 							</div>

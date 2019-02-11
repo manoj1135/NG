@@ -1,11 +1,25 @@
 var loginController = function($scope, $http, $location, $window, $rootScope){
 	$scope.errorMsg = "";
 	$scope.successMsg = "";
-	$scope.user = {};
+	$scope.user = {
+		userType:{
+			id:"0"
+		},
+		userRole:{
+			id:"0"
+		}
+	};
 	$scope.userTypes = [
+		{id:"0", name:"Select User Type"},
 		{id:"1", name:"Administrator"},
 		{id:"2", name:"Reg Admin"},
 		{id:"3", name:"Reg User"},
+	];
+	$scope.roleTypes = [
+		{id:"0", name:"Select User Role"},
+		{id:"1", name:"Network Builder"},
+		{id:"2", name:"Administrator"},
+		{id:"3", name:"Provisioner"},
 	];
 	$scope.validateUser = function(){
 		$http.post("/api/validateUser",{user:$scope.user})
@@ -94,12 +108,10 @@ var homeController = function($scope, $http, $location, $window, $rootScope){
 		console.log("module "+moduleName);
 	}
 	$scope.openThisMenu = function(e){
-		console.log("open ",e);
 		let target = $(e.target);
 		target.addClass("openMenu");
 	}
 	$scope.closeThisMenu = function (e){
-		console.log("close ",e);
 		let target = $(e.target);
 		target.removeClass("openMenu");
 	}
