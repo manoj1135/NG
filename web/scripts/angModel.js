@@ -26,12 +26,18 @@ mainApp.config(['$routeProvider','$locationProvider','$stateProvider',
             when('/home', {
                 templateUrl: '../pages/home.html',
                 controller:'homeController'
-            }).
-            otherwise({
-                redirectTo: '/'
             });
+            // otherwise({
+            //     redirectTo: '/'
+            // });
+
+            $stateProvider.state("users",{
+                templateUrl:"../pages/templates/Users.html",
+                controller:"UserController"
+            })
         $locationProvider.html5Mode(true);
     }
 ]);
  mainApp.controller('loginController', loginController);
  mainApp.controller('homeController', homeController);
+ mainApp.controller('UserController', UserController);

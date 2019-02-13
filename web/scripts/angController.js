@@ -95,8 +95,7 @@ var loginController = function($scope, $http, $location, $window, $rootScope){
 	}
 }
 
-var homeController = function($scope, $http, $location, $window, $rootScope){
-	
+var homeController = function($scope, $state, $stateParams, $http, $location, $window, $rootScope){
 	
 	$scope.toggleMenu = function() {
 		$(".left").toggleClass("left-state-hover");
@@ -105,7 +104,7 @@ var homeController = function($scope, $http, $location, $window, $rootScope){
 		$location.path("/home");
 	}
 	$scope.switchMenu = function (moduleName) {
-		console.log("module "+moduleName);
+		$state.go(moduleName);
 	}
 	$scope.openThisMenu = function(e){
 		let target = $(e.target);
@@ -114,5 +113,12 @@ var homeController = function($scope, $http, $location, $window, $rootScope){
 	$scope.closeThisMenu = function (e){
 		let target = $(e.target);
 		target.removeClass("openMenu");
+	}
+}
+
+var UserController = function($scope, $http, $location, $window, $rootScope){
+	console.log("UserController ",$scope);	
+	$scope.init = function(){
+		console.log("initing user controller...");
 	}
 }

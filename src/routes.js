@@ -14,10 +14,17 @@ module.exports = function(app){
     }));
 
     // Route all GET request to index
-    app.get('/*', (req, res) => {
-        // console.log("req ",req);
-        res.redirect('/');
-    });
+    // app.get('/*', (req, res) => {
+    //     // console.log("req ",req);
+    //     res.redirect('/');
+    // });
+
+    app.use('*', function (req, res, next) {
+        let method = req.method;
+        console.log('Request Type:', req.method);
+        console.log("Request url: ",req.originalUrl);
+        next();
+    })
 
     app.post("/api/validateUser",(req, res)=>{
         var user = req.body.user;

@@ -21,7 +21,7 @@
             "name":"users",
             "displayText":"Users",
             "icon":"fas fa-fw fa-user-circle",
-            "url":"/users",
+            "url":"Users",
             "userType":"1,2,3"
         }
     ]
