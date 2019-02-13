@@ -31,9 +31,13 @@ mainApp.config(['$routeProvider','$locationProvider','$stateProvider',
             //     redirectTo: '/'
             // });
 
-            $stateProvider.state("users",{
-                templateUrl:"../pages/templates/Users.html",
-                controller:"UserController"
+            $stateProvider.state("Users",{
+                views:{
+                    "moduleMainView":{
+                        controller:"UserController",
+                        templateUrl:"../pages/templates/Users.html",
+                    }
+                }
             })
         $locationProvider.html5Mode(true);
     }

@@ -29,7 +29,6 @@ var loginController = function($scope, $http, $location, $window, $rootScope){
 				if(resp.errorCode == "00000"){
 					$rootScope.loggedInUserInfo = resp.data.user;
 					$rootScope.userModules = resp.data.userModules;
-					console.log($rootScope);
 					$location.path("/home");
 				}else{
 					$scope.errorMsg = resp.message;
