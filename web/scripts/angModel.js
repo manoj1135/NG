@@ -26,10 +26,10 @@ mainApp.config(['$routeProvider','$locationProvider','$stateProvider',
             when('/home', {
                 templateUrl: '../pages/home.html',
                 controller:'homeController'
+            }).
+            otherwise({
+                redirectTo: '/'
             });
-            // otherwise({
-            //     redirectTo: '/'
-            // });
 
             $stateProvider.state("Users",{
                 views:{
