@@ -2,6 +2,9 @@ const database = require("../conf/db/Database");
 var session = require('express-session');
 const express = require('express');
 const router = express.Router();
+const path = require('path');
+const utilDir = path.join(__dirname+"/utility");
+const GenericUtil = require(path.join(utilDir+"/GenericUtil"));
 module.exports = function(app){
     app.use(session({
         key: 'user_sid',
@@ -68,5 +71,10 @@ module.exports = function(app){
         done((response)=>{
             res.send(response);
         });
+    });
+
+    app.post("/api/loadServices", (req, res)=>{
+        var items = GenericUtil.loadServices();
+        res.send(items);
     });
 }

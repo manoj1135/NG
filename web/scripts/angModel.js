@@ -1,5 +1,5 @@
 var mainApp = angular.module("myModule",["ngRoute","720kb.datepicker", "ui.router"]);
-mainApp.run(function($rootScope){
+mainApp.run(function($rootScope, $http){
     $rootScope.loggedInUserInfo = {};
 });
 
@@ -42,6 +42,7 @@ mainApp.config(['$routeProvider','$locationProvider','$stateProvider',
         $locationProvider.html5Mode(true);
     }
 ]);
+
  mainApp.controller('loginController', loginController);
  mainApp.controller('homeController', homeController);
- mainApp.controller('UserController', UserController);
+
