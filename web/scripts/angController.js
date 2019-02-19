@@ -120,17 +120,16 @@ $.ajax({
 	type: "POST",
 	url: "/api/loadServices",
 	success: function(resp){
-		let services = resp.data;
-        let serviceDir = "../services/";
-        for(var s in services){
-            let script = serviceDir+services[s];
-            $.getScript( script, function( data, textStatus, jqxhr ) {
-                console.log( typeof(data) ); // Data returned
-                console.log( textStatus ); // Success
-                console.log( jqxhr.status ); // 200
-                console.log( "Load was performed." );
-                console.log("mainApp ",mainApp);
-            });
+		let services = resp;
+		let serviceDir = "../services/";
+		console.log("services ",services);
+        for(var i=0; i<services.length;i++){
+			let script = serviceDir+services[i];
+			if($("head").find("script[src='"+script+"']").length <= 0){
+				$("head").append(
+					"<script src='"+script+"'></script>"
+				);
+			}
         }
 	}
   });
