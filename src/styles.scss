@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+.image-bg{
+	background-image: url("assets/images/app-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+html{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: #e3e3e3;
+	font-size: 15px;
+}
+
+.btn{
+	background: #ff9900 none repeat scroll 0 0;
+    padding: 0.4em;
+    min-width: 5em;
+}
+
+.m-textbox, .m-selectbox{
+	border: 1px solid;
+    background-color: #464646;
+    border-color: #282828;
+    width: 180px;
+	height: 30px;
+	color:#e3e3e3;
+}

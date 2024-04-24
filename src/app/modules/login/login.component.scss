@@ -1,0 +1,25 @@
+.login-form{
+	text-align:center;
+
+    .form-group {
+        margin-bottom:10px;
+    }
+
+    .main-div {
+        background: transparent;
+        border-radius: 17px;
+        margin: 0px auto 30px;
+        max-width: 38%;
+        padding: 50px 30px 70px 30px;
+        border: 1px solid #e3e3e3;
+    }
+
+    .form-control {
+        background: #f7f7f7 none repeat scroll 0 0;
+        border: 1px solid #d4d4d4;
+        border-radius: 4px;
+        font-size: 14px;
+        height: 35px;
+        line-height: 35px;
+    }
+}
